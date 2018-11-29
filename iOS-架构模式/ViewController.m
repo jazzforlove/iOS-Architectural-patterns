@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "MVCViewController.h"
 @interface ViewController ()
 
 @end
@@ -16,8 +16,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
 }
+
+- (IBAction)btnDidClick:(UIButton *)sender {
+    switch (sender.tag) {
+        case 100:{
+            [self.navigationController pushViewController:[MVCViewController new] animated:YES];
+            break;
+        }
+        case 101:{
+            
+            break;
+        }
+        case 102:{
+            
+            break;
+        }
+            
+        default:
+            break;
+    }
+}
+
 
 
 @end

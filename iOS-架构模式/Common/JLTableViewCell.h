@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PresentDalegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) NSInteger num;
 
 @property (nonatomic,strong) NSIndexPath *indexpath;
+
+@property (nonatomic, weak) id<PresentDelegate> delegate;
 
 @end
 

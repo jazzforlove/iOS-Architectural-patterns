@@ -10,10 +10,10 @@
 #import "JLTableViewCell.h"
 #import "Present.h"
 #import "JLModel.h"
-
+#import "PresentDalegate.h"
 static NSString *const identifier = @"cell";
 
-@interface MVCViewController ()
+@interface MVCViewController ()<PresentDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) JLDataSource *dataSource;
@@ -25,13 +25,16 @@ static NSString *const identifier = @"cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"MVC";
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
+    __weak typeof(self) weakSelf = self;
     self.dataSource = [[JLDataSource alloc]initWithIdentifier:identifier configureBlock:^(JLTableViewCell *cell, JLModel *model, NSIndexPath * _Nonnull indexPath) {
         cell.nameLab.text = model.name;
         cell.numLab.text = model.num;
         cell.num = [model.num integerValue];
         cell.indexpath = indexPath;
+        cell.delegate = weakSelf;
     } selectBlock:^(NSIndexPath * _Nonnull indexPath) {
         
     } reloadData:^(NSMutableArray * _Nonnull array) {
@@ -52,6 +55,7 @@ static NSString *const identifier = @"cell";
 - (UITableView *)tableView{
     if (!_tableView) {
         _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView.backgroundColor = [UIColor colorWithRed:220 green:220 blue:221 alpha:1.0];
         _tableView.allowsSelection = NO;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_tableView registerClass:[JLTableViewCell class] forCellReuseIdentifier:identifier];
@@ -63,6 +67,13 @@ static NSString *const identifier = @"cell";
         _persent = [[Present alloc]init];
     }
     return _persent;
+}
+
+#pragma mark -- PresentDelegate
+
+- (void)didClickAddBtnWithNum:(NSString *)num indexPath:(NSIndexPath *)indexPath{
+    JLModel *model = self.dataSource.dataArray[indexPath.row];
+    model.num = num;
 }
 
 

@@ -18,6 +18,7 @@
     return self;
 }
 - (void)setupUI{
+    self.contentView.backgroundColor = [UIColor whiteColor];
     [self.contentView addSubview:self.nameLab];
     [self.contentView addSubview:self.addBtn];
     [self.contentView addSubview:self.numLab];
@@ -100,15 +101,24 @@
 #pragma mark -- action
 
 - (void)addBtnDidClick{
-    
+    if ([self.numLab.text integerValue] >=200) return;
+    self.num ++;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(didClickAddBtnWithNum:indexPath:)]) {
+        [self.delegate didClickAddBtnWithNum:[NSString stringWithFormat:@"%ld",(long)_num] indexPath:self.indexpath];
+    }
 }
 
 - (void)subBtnDidClick{
-    
+    if ([self.numLab.text integerValue] <=0) return;
+    self.num --;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(didClickAddBtnWithNum:indexPath:)]) {
+        [self.delegate didClickAddBtnWithNum:[NSString stringWithFormat:@"%ld",(long)_num] indexPath:self.indexpath];
+    }
 }
 
 - (void)setNum:(NSInteger)num{
     _num = num;
+    self.numLab.text = [NSString stringWithFormat:@"%ld",(long)_num];
 }
 
 
