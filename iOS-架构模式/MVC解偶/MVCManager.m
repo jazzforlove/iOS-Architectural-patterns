@@ -42,12 +42,25 @@ static MVCManager *manager = nil;
         [self.dataArray addObject:model];
     }
 }
+- (void)addDataArray:(NSArray *)array{
+    if (!array.count) return;
+    [self.dataArray removeAllObjects];
+    [self.dataArray addObjectsFromArray:array];
+}
 
 - (NSMutableArray *)dataArray{
     if (!_dataArray) {
         _dataArray = [NSMutableArray array];
     }
     return _dataArray;
+}
+-(NSInteger)total{
+    NSInteger total = 0;
+    for (JLModel* model in self.dataArray) {
+        NSInteger num = [model.num integerValue];
+        total += num;
+    }
+    return total;
 }
 
 @end

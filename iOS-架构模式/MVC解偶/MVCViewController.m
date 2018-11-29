@@ -29,7 +29,7 @@ static NSString *const identifier = @"mvcCell";
     self.title = @"MVC";
     self.view.backgroundColor = [UIColor whiteColor];
     /*
-     解偶:
+     解耦:
      1.数据源获取抽取
      2.tableView数据源代理抽取
      3.cell与model之间解偶
@@ -45,11 +45,26 @@ static NSString *const identifier = @"mvcCell";
     } selectBlock:^(NSIndexPath * _Nonnull indexPath) {
         NSLog(@"%ld",indexPath.row);
     } reloadData:^(NSMutableArray * _Nonnull array) {
-        
+        [[MVCManager shareManager] addDataArray:array];
+        [weakSelf refreshTableView];
     }];
     [self.dataSource addDataSource:[MVCManager shareManager].dataArray];
     self.tableView.delegate = self.dataSource;
     self.tableView.dataSource = self.dataSource;
+    [self setNarBarRightItem];
+}
+- (void)setNarBarRightItem{
+    
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 80, 40)];
+    label.textAlignment = NSTextAlignmentRight;
+    label.textColor = [UIColor cyanColor];
+    label.text = [NSString stringWithFormat:@"总计: %zd",[[MVCManager shareManager] total]];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:label];
+}
+- (void)refreshTableView{
+    [self.tableView reloadData];
+    UILabel *rightLab = self.navigationItem.rightBarButtonItem.customView;
+    rightLab.text = [NSString stringWithFormat:@"总计: %zd",[[MVCManager shareManager] total]];
 }
 
 - (UITableView *)tableView{
@@ -77,6 +92,9 @@ static NSString *const identifier = @"mvcCell";
     JLModel *model  = dataArr[indexPath.row];
     // 修改模型中num中
     model.num = num;
+    
+    UILabel *rightLab = self.navigationItem.rightBarButtonItem.customView;
+    rightLab.text = [NSString stringWithFormat:@"总计: %zd",[[MVCManager shareManager] total]];
     
 }
 
