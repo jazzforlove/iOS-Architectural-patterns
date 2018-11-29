@@ -7,15 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "PresentDalegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Present : NSObject
+@interface Present : NSObject<PresentDelegate>
 
 @property (nonatomic,strong) NSMutableArray *dataArray;
 
+@property (nonatomic,weak) id<PresentDelegate> delegate;
 
+- (void)addDataArray:(NSArray *)array;
+
+-(NSInteger)total;
 
 @end
 

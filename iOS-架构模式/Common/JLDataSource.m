@@ -49,8 +49,42 @@
 
 #pragma mark -- UITableViewDelegate
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (self.selectBlock) {
+        self.selectBlock(indexPath);
+    }
+}
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+//侧滑删除
+- (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
+    __weak typeof(self) weakSelf = self;
+    UITableViewRowAction *deleRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        [weakSelf.dataArray removeObjectAtIndex:indexPath.row];
+        weakSelf.reloadDataBlock(weakSelf.dataArray);
+    }];
+    return @[deleRowAction];
+}
 
-
+#pragma mark -- UICollectionViewDataSource
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return self.dataArray.count?self.dataArray.count:0;
+}
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:self.identifier forIndexPath:indexPath];
+    id model = [self modelsAtIndexPath:indexPath];
+    if (self.configureBeforeBlock) {
+        self.configureBeforeBlock(cell, model, indexPath);
+    }
+    return cell;
+}
+#pragma mark -- UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    if (self.selectBlock) {
+        self.selectBlock(indexPath);
+    }
+}
 - (void)addDataSource:(NSArray *)array{
     if (![array count]) return;
     if (self.dataArray.count) {

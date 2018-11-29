@@ -34,22 +34,35 @@ static NSString *const identifier = @"cell";
         cell.numLab.text = model.num;
         cell.num = [model.num integerValue];
         cell.indexpath = indexPath;
-        cell.delegate = weakSelf;
+        cell.delegate = weakSelf.persent;
     } selectBlock:^(NSIndexPath * _Nonnull indexPath) {
-        
+        NSLog(@"%ld",indexPath.row);
     } reloadData:^(NSMutableArray * _Nonnull array) {
-        
+        [weakSelf.persent addDataArray:[array copy]];
+        [weakSelf refreshView];
     }];
     [self.dataSource addDataSource:[self.persent.dataArray copy]];
     self.tableView.delegate = self.dataSource;
     self.tableView.dataSource = self.dataSource;
     
-}
-- (void)refreshView{
+    UILabel *rightLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 80, 44)];
+    rightLab.textAlignment = NSTextAlignmentRight;
+    rightLab.textColor = [UIColor cyanColor];
+    rightLab.text = [NSString stringWithFormat:@"合计: %ld",(long)[self.persent total]];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightLab];
     
+}
+#pragma mark -- PresentDelegate
+
+- (void)reloadDataForUI{
+    [self refreshView];
+}
+// 主控制器只负责展示更新UI
+- (void)refreshView{
     [self.dataSource addDataSource:[self.persent.dataArray copy]];
     [self.tableView reloadData];
-    
+    UILabel *rightLab = self.navigationItem.rightBarButtonItem.customView;
+    rightLab.text = [NSString stringWithFormat:@"合计: %ld",(long)[self.persent total]];
 }
 
 - (UITableView *)tableView{
@@ -65,16 +78,11 @@ static NSString *const identifier = @"cell";
 - (Present *)persent{
     if (!_persent) {
         _persent = [[Present alloc]init];
+        _persent.delegate = self;
     }
     return _persent;
 }
 
-#pragma mark -- PresentDelegate
-
-- (void)didClickAddBtnWithNum:(NSString *)num indexPath:(NSIndexPath *)indexPath{
-    JLModel *model = self.dataSource.dataArray[indexPath.row];
-    model.num = num;
-}
 
 
 

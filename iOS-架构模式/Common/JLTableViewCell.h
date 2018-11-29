@@ -14,17 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface JLTableViewCell : UITableViewCell
 
 @property (nonatomic,strong) UILabel *nameLab;
-
 @property (nonatomic,strong) UIButton *addBtn;
-
 @property (nonatomic,strong) UILabel *numLab;
-
 @property (nonatomic,strong) UIButton *subBtn;
-
 @property (nonatomic,assign) NSInteger num;
-
 @property (nonatomic,strong) NSIndexPath *indexpath;
-
 @property (nonatomic, weak) id<PresentDelegate> delegate;
 
 @end
