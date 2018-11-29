@@ -16,8 +16,8 @@ static NSString *const identifier = @"cell";
 @interface MVCViewController ()<PresentDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) JLDataSource *dataSource;
-@property (nonatomic,strong)  Present *persent;
+
+@property (nonatomic,strong) NSMutableArray *dataArr;
 
 @end
 
@@ -28,42 +28,14 @@ static NSString *const identifier = @"cell";
     self.title = @"MVC";
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
-    __weak typeof(self) weakSelf = self;
-    self.dataSource = [[JLDataSource alloc]initWithIdentifier:identifier configureBlock:^(JLTableViewCell *cell, JLModel *model, NSIndexPath * _Nonnull indexPath) {
-        cell.nameLab.text = model.name;
-        cell.numLab.text = model.num;
-        cell.num = [model.num integerValue];
-        cell.indexpath = indexPath;
-        cell.delegate = weakSelf.persent;
-    } selectBlock:^(NSIndexPath * _Nonnull indexPath) {
-        NSLog(@"%ld",indexPath.row);
-    } reloadData:^(NSMutableArray * _Nonnull array) {
-        [weakSelf.persent addDataArray:[array copy]];
-        [weakSelf refreshView];
-    }];
-    [self.dataSource addDataSource:[self.persent.dataArray copy]];
-    self.tableView.delegate = self.dataSource;
-    self.tableView.dataSource = self.dataSource;
     
-    UILabel *rightLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 80, 44)];
-    rightLab.textAlignment = NSTextAlignmentRight;
-    rightLab.textColor = [UIColor cyanColor];
-    rightLab.text = [NSString stringWithFormat:@"合计: %ld",(long)[self.persent total]];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightLab];
     
 }
-#pragma mark -- PresentDelegate
 
-- (void)reloadDataForUI{
-    [self refreshView];
+- (void)loadDataArr{
+    
 }
-// 主控制器只负责展示更新UI
-- (void)refreshView{
-    [self.dataSource addDataSource:[self.persent.dataArray copy]];
-    [self.tableView reloadData];
-    UILabel *rightLab = self.navigationItem.rightBarButtonItem.customView;
-    rightLab.text = [NSString stringWithFormat:@"合计: %ld",(long)[self.persent total]];
-}
+
 
 - (UITableView *)tableView{
     if (!_tableView) {
@@ -75,12 +47,11 @@ static NSString *const identifier = @"cell";
     }
     return _tableView;
 }
-- (Present *)persent{
-    if (!_persent) {
-        _persent = [[Present alloc]init];
-        _persent.delegate = self;
+- (NSMutableArray *)dataArr{
+    if (!_dataArr) {
+        _dataArr = [NSMutableArray array];
     }
-    return _persent;
+    return _dataArr;
 }
 
 
