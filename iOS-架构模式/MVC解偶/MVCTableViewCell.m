@@ -1,14 +1,14 @@
 //
-//  JLTableViewCell.m
+//  MVCTableViewCell.m
 //  iOS-架构模式
 //
-//  Created by 李国卿 on 2018/11/28.
+//  Created by 李国卿 on 2018/11/29.
 //  Copyright © 2018年 Jazzfly. All rights reserved.
 //
 
-#import "JLTableViewCell.h"
+#import "MVCTableViewCell.h"
 
-@implementation JLTableViewCell
+@implementation MVCTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -17,13 +17,14 @@
     }
     return self;
 }
+
 - (void)setupUI{
     self.contentView.backgroundColor = [UIColor whiteColor];
     [self.contentView addSubview:self.nameLab];
     [self.contentView addSubview:self.addBtn];
     [self.contentView addSubview:self.numLab];
     [self.contentView addSubview:self.subBtn];
-//    self.num = 0;
+    self.num = 1;
 }
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -97,33 +98,27 @@
     }
     return _subBtn;
 }
-
-#pragma mark -- action
-
+- (void)setModel:(JLModel *)model{
+    _model = model;
+    self.nameLab.text = model.name;
+//    self.numLab.text = model.num;
+    self.num = [model.num integerValue];
+}
 - (void)addBtnDidClick{
     if ([self.numLab.text integerValue] >=200) return;
     self.num ++;
-    if (self.delegate && [self.delegate respondsToSelector:@selector(didClickAddBtnWithNum:indexPath:)]) {
-        [self.delegate didClickAddBtnWithNum:[NSString stringWithFormat:@"%ld",(long)_num] indexPath:self.indexpath];
-    }
+    self.model.num = [NSString stringWithFormat:@"%zd",self.num];
 }
 
 - (void)subBtnDidClick{
     if ([self.numLab.text integerValue] <=0) return;
     self.num --;
-    if (self.delegate && [self.delegate respondsToSelector:@selector(didClickAddBtnWithNum:indexPath:)]) {
-        [self.delegate didClickAddBtnWithNum:[NSString stringWithFormat:@"%ld",(long)_num] indexPath:self.indexpath];
-    }
+    self.model.num = [NSString stringWithFormat:@"%zd",self.num];
 }
 
 - (void)setNum:(NSInteger)num{
     _num = num;
     self.numLab.text = [NSString stringWithFormat:@"%ld",(long)_num];
 }
-
-
-
-
-
 
 @end

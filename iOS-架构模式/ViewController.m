@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "MVCViewController.h"
+#import "MVPViewController.h"
 @interface ViewController ()
 
 @end
@@ -26,7 +27,7 @@
             break;
         }
         case 101:{
-            
+            [self.navigationController pushViewController:[MVPViewController new] animated:YES];
             break;
         }
         case 102:{

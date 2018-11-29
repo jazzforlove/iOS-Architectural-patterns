@@ -20,6 +20,7 @@
 		5D4F77CC21AE86E800921FDA /* JLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F77CB21AE86E800921FDA /* JLTableViewCell.m */; };
 		5D4F77CF21AE8ABB00921FDA /* Present.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F77CE21AE8ABB00921FDA /* Present.m */; };
 		5DD1826621AFD1CA00B814FA /* MVPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD1826521AFD1CA00B814FA /* MVPViewController.m */; };
+		5DD1826921AFD68E00B814FA /* MVCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD1826821AFD68E00B814FA /* MVCTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,8 @@
 		5D4F77D421AE8C7F00921FDA /* PresentDalegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentDalegate.h; sourceTree = "<group>"; };
 		5DD1826421AFD1CA00B814FA /* MVPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPViewController.h; sourceTree = "<group>"; };
 		5DD1826521AFD1CA00B814FA /* MVPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPViewController.m; sourceTree = "<group>"; };
+		5DD1826721AFD68E00B814FA /* MVCTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCTableViewCell.h; sourceTree = "<group>"; };
+		5DD1826821AFD68E00B814FA /* MVCTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCTableViewCell.m; sourceTree = "<group>"; };
 		72F5EE04F28E017B05303B5E /* libPods-iOS-架构模式.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS-架构模式.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -108,6 +111,8 @@
 			children = (
 				5D4F77C421AE867900921FDA /* MVCViewController.h */,
 				5D4F77C521AE867900921FDA /* MVCViewController.m */,
+				5DD1826721AFD68E00B814FA /* MVCTableViewCell.h */,
+				5DD1826821AFD68E00B814FA /* MVCTableViewCell.m */,
 			);
 			path = "MVC解偶";
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DD1826921AFD68E00B814FA /* MVCTableViewCell.m in Sources */,
 				5D4F77C621AE867900921FDA /* MVCViewController.m in Sources */,
 				5D4F77CC21AE86E800921FDA /* JLTableViewCell.m in Sources */,
 				5D4F77AA21AE799600921FDA /* ViewController.m in Sources */,
