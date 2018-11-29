@@ -24,7 +24,7 @@
     [self.contentView addSubview:self.addBtn];
     [self.contentView addSubview:self.numLab];
     [self.contentView addSubview:self.subBtn];
-    self.num = 1;
+//    self.num = 1;
 }
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -101,7 +101,6 @@
 - (void)setModel:(JLModel *)model{
     _model = model;
     self.nameLab.text = model.name;
-//    self.numLab.text = model.num;
     self.num = [model.num integerValue];
 }
 - (void)addBtnDidClick{

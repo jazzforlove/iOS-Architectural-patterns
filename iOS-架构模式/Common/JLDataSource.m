@@ -10,11 +10,8 @@
 @interface JLDataSource ()
 
 @property (nonatomic, strong) IBInspectable NSString *identifier;
-
 @property (nonatomic, copy) cellConfigureBefore configureBeforeBlock;
-
 @property (nonatomic, copy) selectCell selectBlock;
-
 @property (nonatomic, copy) reloadData reloadDataBlock;
 
 @end
@@ -68,7 +65,8 @@
 }
 
 #pragma mark -- UICollectionViewDataSource
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+
+- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.dataArray.count?self.dataArray.count:0;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -79,6 +77,7 @@
     }
     return cell;
 }
+
 #pragma mark -- UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     if (self.selectBlock) {
