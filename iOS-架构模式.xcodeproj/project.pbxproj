@@ -21,6 +21,7 @@
 		5D4F77CF21AE8ABB00921FDA /* Present.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F77CE21AE8ABB00921FDA /* Present.m */; };
 		5DD1826621AFD1CA00B814FA /* MVPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD1826521AFD1CA00B814FA /* MVPViewController.m */; };
 		5DD1826921AFD68E00B814FA /* MVCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD1826821AFD68E00B814FA /* MVCTableViewCell.m */; };
+		5DD1826C21AFE6A000B814FA /* MVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD1826B21AFE6A000B814FA /* MVCManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		5DD1826521AFD1CA00B814FA /* MVPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPViewController.m; sourceTree = "<group>"; };
 		5DD1826721AFD68E00B814FA /* MVCTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCTableViewCell.h; sourceTree = "<group>"; };
 		5DD1826821AFD68E00B814FA /* MVCTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCTableViewCell.m; sourceTree = "<group>"; };
+		5DD1826A21AFE6A000B814FA /* MVCManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCManager.h; sourceTree = "<group>"; };
+		5DD1826B21AFE6A000B814FA /* MVCManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCManager.m; sourceTree = "<group>"; };
 		72F5EE04F28E017B05303B5E /* libPods-iOS-架构模式.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS-架构模式.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -111,6 +114,8 @@
 			children = (
 				5D4F77C421AE867900921FDA /* MVCViewController.h */,
 				5D4F77C521AE867900921FDA /* MVCViewController.m */,
+				5DD1826A21AFE6A000B814FA /* MVCManager.h */,
+				5DD1826B21AFE6A000B814FA /* MVCManager.m */,
 				5DD1826721AFD68E00B814FA /* MVCTableViewCell.h */,
 				5DD1826821AFD68E00B814FA /* MVCTableViewCell.m */,
 			);
@@ -143,8 +148,8 @@
 				5D4F77C721AE86CE00921FDA /* JLModel.h */,
 				5D4F77C821AE86CE00921FDA /* JLModel.m */,
 				5D4F77CA21AE86E800921FDA /* JLTableViewCell.h */,
-				5D4F77CB21AE86E800921FDA /* JLTableViewCell.m */,
 				5D4F77D421AE8C7F00921FDA /* PresentDalegate.h */,
+				5D4F77CB21AE86E800921FDA /* JLTableViewCell.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 				5DD1826621AFD1CA00B814FA /* MVPViewController.m in Sources */,
 				5D4F77B521AE799700921FDA /* main.m in Sources */,
 				5D4F77C321AE7CDA00921FDA /* JLDataSource.m in Sources */,
+				5DD1826C21AFE6A000B814FA /* MVCManager.m in Sources */,
 				5D4F77CF21AE8ABB00921FDA /* Present.m in Sources */,
 				5D4F77A721AE799600921FDA /* AppDelegate.m in Sources */,
 				5D4F77C921AE86CE00921FDA /* JLModel.m in Sources */,

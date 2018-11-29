@@ -98,26 +98,32 @@
     }
     return _subBtn;
 }
-- (void)setModel:(JLModel *)model{
-    _model = model;
-    self.nameLab.text = model.name;
-    self.num = [model.num integerValue];
-}
+//- (void)setModel:(JLModel *)model{
+//    _model = model;
+//    self.nameLab.text = model.name;
+//    self.num = [model.num integerValue];
+//}
 - (void)addBtnDidClick{
     if ([self.numLab.text integerValue] >=200) return;
     self.num ++;
-    self.model.num = [NSString stringWithFormat:@"%zd",self.num];
+//    self.model.num = [NSString stringWithFormat:@"%zd",self.num];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(didClickAddBtnWithNum:indexPath:)]) {
+        [self.delegate didClickAddBtnWithNum:[NSString stringWithFormat:@"%ld",(long)self.num] indexPath:self.indexpath];
+    }
 }
 
 - (void)subBtnDidClick{
     if ([self.numLab.text integerValue] <=0) return;
     self.num --;
-    self.model.num = [NSString stringWithFormat:@"%zd",self.num];
+//    self.model.num = [NSString stringWithFormat:@"%zd",self.num];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(didClickAddBtnWithNum:indexPath:)]) {
+        [self.delegate didClickAddBtnWithNum:[NSString stringWithFormat:@"%ld",(long)self.num] indexPath:self.indexpath];
+    }
 }
 
 - (void)setNum:(NSInteger)num{
     _num = num;
-    self.numLab.text = [NSString stringWithFormat:@"%ld",(long)_num];
+    self.numLab.text = [NSString stringWithFormat:@"%ld",(long)num];
 }
 
 @end

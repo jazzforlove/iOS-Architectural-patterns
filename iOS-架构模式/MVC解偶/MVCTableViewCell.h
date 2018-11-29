@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "JLModel.h"
+#import "PresentDalegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,7 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) UILabel *numLab;
 @property (nonatomic,strong) UIButton *subBtn;
 @property (nonatomic,assign) NSInteger num;
-@property (nonatomic,strong) JLModel *model;
+@property (nonatomic,strong) NSIndexPath *indexpath;
+@property (nonatomic, weak) id<PresentDelegate> delegate;
 @end
 
 NS_ASSUME_NONNULL_END
