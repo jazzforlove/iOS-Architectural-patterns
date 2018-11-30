@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		48C965202D37221F060075AD /* libPods-iOS-架构模式.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F5EE04F28E017B05303B5E /* libPods-iOS-架构模式.a */; };
+		5D155C3121B0CBCF00534461 /* MVVMBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D155C3021B0CBCF00534461 /* MVVMBaseModel.m */; };
+		5D155C3421B0CBE300534461 /* MVVMViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D155C3321B0CBE300534461 /* MVVMViewModel.m */; };
+		5D155C3921B0D7B000534461 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 5D155C3821B0D7B000534461 /* File */; };
 		5D4F77A721AE799600921FDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F77A621AE799600921FDA /* AppDelegate.m */; };
 		5D4F77AA21AE799600921FDA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F77A921AE799600921FDA /* ViewController.m */; };
 		5D4F77AD21AE799600921FDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4F77AB21AE799600921FDA /* Main.storyboard */; };
@@ -19,6 +22,7 @@
 		5D4F77C921AE86CE00921FDA /* JLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F77C821AE86CE00921FDA /* JLModel.m */; };
 		5D4F77CC21AE86E800921FDA /* JLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F77CB21AE86E800921FDA /* JLTableViewCell.m */; };
 		5D4F77CF21AE8ABB00921FDA /* Present.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F77CE21AE8ABB00921FDA /* Present.m */; };
+		5D629D0B21B02F49000240FB /* MVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D629D0A21B02F49000240FB /* MVVMViewController.m */; };
 		5DD1826621AFD1CA00B814FA /* MVPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD1826521AFD1CA00B814FA /* MVPViewController.m */; };
 		5DD1826921AFD68E00B814FA /* MVCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD1826821AFD68E00B814FA /* MVCTableViewCell.m */; };
 		5DD1826C21AFE6A000B814FA /* MVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD1826B21AFE6A000B814FA /* MVCManager.m */; };
@@ -27,6 +31,11 @@
 /* Begin PBXFileReference section */
 		18E046DF4DC0DC7B5DFFC1B7 /* Pods-iOS-架构模式.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-架构模式.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-架构模式/Pods-iOS-架构模式.release.xcconfig"; sourceTree = "<group>"; };
 		436562AA7A58B6185E2CF9E6 /* Pods-iOS-架构模式.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-架构模式.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-架构模式/Pods-iOS-架构模式.debug.xcconfig"; sourceTree = "<group>"; };
+		5D155C2F21B0CBCF00534461 /* MVVMBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMBaseModel.h; sourceTree = "<group>"; };
+		5D155C3021B0CBCF00534461 /* MVVMBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMBaseModel.m; sourceTree = "<group>"; };
+		5D155C3221B0CBE300534461 /* MVVMViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMViewModel.h; sourceTree = "<group>"; };
+		5D155C3321B0CBE300534461 /* MVVMViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMViewModel.m; sourceTree = "<group>"; };
+		5D155C3821B0D7B000534461 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		5D4F77A221AE799500921FDA /* iOS-架构模式.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-架构模式.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4F77A521AE799600921FDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5D4F77A621AE799600921FDA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -49,6 +58,8 @@
 		5D4F77CD21AE8ABB00921FDA /* Present.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Present.h; sourceTree = "<group>"; };
 		5D4F77CE21AE8ABB00921FDA /* Present.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Present.m; sourceTree = "<group>"; };
 		5D4F77D421AE8C7F00921FDA /* PresentDalegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentDalegate.h; sourceTree = "<group>"; };
+		5D629D0921B02F49000240FB /* MVVMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMViewController.h; sourceTree = "<group>"; };
+		5D629D0A21B02F49000240FB /* MVVMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMViewController.m; sourceTree = "<group>"; };
 		5DD1826421AFD1CA00B814FA /* MVPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPViewController.h; sourceTree = "<group>"; };
 		5DD1826521AFD1CA00B814FA /* MVPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPViewController.m; sourceTree = "<group>"; };
 		5DD1826721AFD68E00B814FA /* MVCTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCTableViewCell.h; sourceTree = "<group>"; };
@@ -136,6 +147,13 @@
 		5D4F77BD21AE79D600921FDA /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				5D629D0921B02F49000240FB /* MVVMViewController.h */,
+				5D629D0A21B02F49000240FB /* MVVMViewController.m */,
+				5D155C2F21B0CBCF00534461 /* MVVMBaseModel.h */,
+				5D155C3021B0CBCF00534461 /* MVVMBaseModel.m */,
+				5D155C3221B0CBE300534461 /* MVVMViewModel.h */,
+				5D155C3321B0CBE300534461 /* MVVMViewModel.m */,
+				5D155C3821B0D7B000534461 /* File */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -229,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D155C3921B0D7B000534461 /* File in Resources */,
 				5D4F77B221AE799700921FDA /* LaunchScreen.storyboard in Resources */,
 				5D4F77AF21AE799700921FDA /* Assets.xcassets in Resources */,
 				5D4F77AD21AE799600921FDA /* Main.storyboard in Resources */,
@@ -263,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D155C3421B0CBE300534461 /* MVVMViewModel.m in Sources */,
 				5DD1826921AFD68E00B814FA /* MVCTableViewCell.m in Sources */,
 				5D4F77C621AE867900921FDA /* MVCViewController.m in Sources */,
 				5D4F77CC21AE86E800921FDA /* JLTableViewCell.m in Sources */,
@@ -271,6 +291,8 @@
 				5D4F77B521AE799700921FDA /* main.m in Sources */,
 				5D4F77C321AE7CDA00921FDA /* JLDataSource.m in Sources */,
 				5DD1826C21AFE6A000B814FA /* MVCManager.m in Sources */,
+				5D629D0B21B02F49000240FB /* MVVMViewController.m in Sources */,
+				5D155C3121B0CBCF00534461 /* MVVMBaseModel.m in Sources */,
 				5D4F77CF21AE8ABB00921FDA /* Present.m in Sources */,
 				5D4F77A721AE799600921FDA /* AppDelegate.m in Sources */,
 				5D4F77C921AE86CE00921FDA /* JLModel.m in Sources */,

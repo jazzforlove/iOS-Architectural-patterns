@@ -1,0 +1,14 @@
+dispatch_queue_create 用于创建用户线程队列。可以创建Serial/Concurrent Dispatch Queue 两种队列，即串行与并行队列。
+1.创建Serial Dispatch Queue 串行队列
+    dispatch_queue_t serialQueue =
+    dispatch_queue_create(“com.SerialQueue”, NULL);
+    可以创建多个串行队列，串行队列也可以并行执行。决不能随意的大量生产Serial Dispatch Queue
+2.创建Concurrent Dispatch Queue
+    dispatch_queue_t concurrentQueue =
+    dispatch_queue_create(“com.ConcurrentQueue”,DISPATCH_QUEUE_CONCURRENT);
+    Concurrent Dispatch Queue不过创建多少都没有问题，因为Concurrent Dispatch Queue所使用的线程由系统的XNU内核高效管理，不会影响系统性能
+3.内存管理 由dispatch_queue_create方法生成的Dispatch Queue并不能由ARC来自动管理内存。可以使用dispatch_release、dispatch_retain来手动管理（引用计数式）
+
+
+
+
