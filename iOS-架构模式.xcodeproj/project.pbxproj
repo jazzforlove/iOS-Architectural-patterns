@@ -18,14 +18,20 @@
 		5D4F77B221AE799700921FDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4F77B021AE799700921FDA /* LaunchScreen.storyboard */; };
 		5D4F77B521AE799700921FDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F77B421AE799700921FDA /* main.m */; };
 		5D4F77C321AE7CDA00921FDA /* JLDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F77C221AE7CDA00921FDA /* JLDataSource.m */; };
-		5D4F77C621AE867900921FDA /* MVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F77C521AE867900921FDA /* MVCViewController.m */; };
 		5D4F77C921AE86CE00921FDA /* JLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F77C821AE86CE00921FDA /* JLModel.m */; };
 		5D4F77CC21AE86E800921FDA /* JLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F77CB21AE86E800921FDA /* JLTableViewCell.m */; };
 		5D4F77CF21AE8ABB00921FDA /* Present.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F77CE21AE8ABB00921FDA /* Present.m */; };
 		5D629D0B21B02F49000240FB /* MVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D629D0A21B02F49000240FB /* MVVMViewController.m */; };
+		5D8F1A8A21B65C530043FA41 /* MVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8F1A8621B65C530043FA41 /* MVCManager.m */; };
+		5D8F1A8B21B65C530043FA41 /* MVCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8F1A8721B65C530043FA41 /* MVCTableViewCell.m */; };
+		5D8F1A8C21B65C530043FA41 /* MVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8F1A8921B65C530043FA41 /* MVCViewController.m */; };
+		5D8F1A9321B65C9A0043FA41 /* UITableView+HYBCacheHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8F1A8F21B65C9A0043FA41 /* UITableView+HYBCacheHeight.m */; };
+		5D8F1A9421B65C9A0043FA41 /* UITableViewCell+HYBMasonryAutoCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8F1A9221B65C9A0043FA41 /* UITableViewCell+HYBMasonryAutoCellHeight.m */; };
+		5D8F1A9721B65D1C0043FA41 /* JLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8F1A9621B65D1C0043FA41 /* JLTableViewController.m */; };
+		5D8F1A9D21B65E520043FA41 /* JLTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8F1A9C21B65E520043FA41 /* JLTableModel.m */; };
+		5D8F1AA021B65E680043FA41 /* JLTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8F1A9F21B65E680043FA41 /* JLTableViewModel.m */; };
+		5D8F1AA621B668290043FA41 /* JLContentViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8F1AA521B668290043FA41 /* JLContentViewCell.m */; };
 		5DD1826621AFD1CA00B814FA /* MVPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD1826521AFD1CA00B814FA /* MVPViewController.m */; };
-		5DD1826921AFD68E00B814FA /* MVCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD1826821AFD68E00B814FA /* MVCTableViewCell.m */; };
-		5DD1826C21AFE6A000B814FA /* MVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD1826B21AFE6A000B814FA /* MVCManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,8 +55,6 @@
 		5D4F77C021AE7B9200921FDA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5D4F77C121AE7CDA00921FDA /* JLDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLDataSource.h; sourceTree = "<group>"; };
 		5D4F77C221AE7CDA00921FDA /* JLDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLDataSource.m; sourceTree = "<group>"; };
-		5D4F77C421AE867900921FDA /* MVCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCViewController.h; sourceTree = "<group>"; };
-		5D4F77C521AE867900921FDA /* MVCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCViewController.m; sourceTree = "<group>"; };
 		5D4F77C721AE86CE00921FDA /* JLModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLModel.h; sourceTree = "<group>"; };
 		5D4F77C821AE86CE00921FDA /* JLModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLModel.m; sourceTree = "<group>"; };
 		5D4F77CA21AE86E800921FDA /* JLTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLTableViewCell.h; sourceTree = "<group>"; };
@@ -60,12 +64,26 @@
 		5D4F77D421AE8C7F00921FDA /* PresentDalegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentDalegate.h; sourceTree = "<group>"; };
 		5D629D0921B02F49000240FB /* MVVMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMViewController.h; sourceTree = "<group>"; };
 		5D629D0A21B02F49000240FB /* MVVMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMViewController.m; sourceTree = "<group>"; };
+		5D8F1A8421B65C530043FA41 /* MVCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVCTableViewCell.h; sourceTree = "<group>"; };
+		5D8F1A8521B65C530043FA41 /* MVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVCViewController.h; sourceTree = "<group>"; };
+		5D8F1A8621B65C530043FA41 /* MVCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVCManager.m; sourceTree = "<group>"; };
+		5D8F1A8721B65C530043FA41 /* MVCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVCTableViewCell.m; sourceTree = "<group>"; };
+		5D8F1A8821B65C530043FA41 /* MVCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVCManager.h; sourceTree = "<group>"; };
+		5D8F1A8921B65C530043FA41 /* MVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVCViewController.m; sourceTree = "<group>"; };
+		5D8F1A8F21B65C9A0043FA41 /* UITableView+HYBCacheHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+HYBCacheHeight.m"; sourceTree = "<group>"; };
+		5D8F1A9021B65C9A0043FA41 /* UITableViewCell+HYBMasonryAutoCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+HYBMasonryAutoCellHeight.h"; sourceTree = "<group>"; };
+		5D8F1A9121B65C9A0043FA41 /* UITableView+HYBCacheHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+HYBCacheHeight.h"; sourceTree = "<group>"; };
+		5D8F1A9221B65C9A0043FA41 /* UITableViewCell+HYBMasonryAutoCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+HYBMasonryAutoCellHeight.m"; sourceTree = "<group>"; };
+		5D8F1A9521B65D1C0043FA41 /* JLTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLTableViewController.h; sourceTree = "<group>"; };
+		5D8F1A9621B65D1C0043FA41 /* JLTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLTableViewController.m; sourceTree = "<group>"; };
+		5D8F1A9B21B65E520043FA41 /* JLTableModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLTableModel.h; sourceTree = "<group>"; };
+		5D8F1A9C21B65E520043FA41 /* JLTableModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLTableModel.m; sourceTree = "<group>"; };
+		5D8F1A9E21B65E680043FA41 /* JLTableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLTableViewModel.h; sourceTree = "<group>"; };
+		5D8F1A9F21B65E680043FA41 /* JLTableViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLTableViewModel.m; sourceTree = "<group>"; };
+		5D8F1AA421B668290043FA41 /* JLContentViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLContentViewCell.h; sourceTree = "<group>"; };
+		5D8F1AA521B668290043FA41 /* JLContentViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLContentViewCell.m; sourceTree = "<group>"; };
 		5DD1826421AFD1CA00B814FA /* MVPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPViewController.h; sourceTree = "<group>"; };
 		5DD1826521AFD1CA00B814FA /* MVPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPViewController.m; sourceTree = "<group>"; };
-		5DD1826721AFD68E00B814FA /* MVCTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCTableViewCell.h; sourceTree = "<group>"; };
-		5DD1826821AFD68E00B814FA /* MVCTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCTableViewCell.m; sourceTree = "<group>"; };
-		5DD1826A21AFE6A000B814FA /* MVCManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCManager.h; sourceTree = "<group>"; };
-		5DD1826B21AFE6A000B814FA /* MVCManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCManager.m; sourceTree = "<group>"; };
 		72F5EE04F28E017B05303B5E /* libPods-iOS-架构模式.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS-架构模式.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -102,10 +120,12 @@
 		5D4F77A421AE799500921FDA /* iOS-架构模式 */ = {
 			isa = PBXGroup;
 			children = (
+				5D8F1A8E21B65C9A0043FA41 /* HYBMasonryAutoCellHeight */,
+				5D8F1A8D21B65C670043FA41 /* 动态计算行高 */,
 				5D4F77BF21AE79EE00921FDA /* Common */,
 				5D4F77BD21AE79D600921FDA /* MVVM */,
 				5D4F77BC21AE79C300921FDA /* MVP面向协议 */,
-				5D4F77BB21AE79A300921FDA /* MVC解偶 */,
+				5D8F1A8321B65C530043FA41 /* MVC解耦 */,
 				5D4F77A521AE799600921FDA /* AppDelegate.h */,
 				5D4F77A621AE799600921FDA /* AppDelegate.m */,
 				5D4F77A821AE799600921FDA /* ViewController.h */,
@@ -118,19 +138,6 @@
 				5D4F77B421AE799700921FDA /* main.m */,
 			);
 			path = "iOS-架构模式";
-			sourceTree = "<group>";
-		};
-		5D4F77BB21AE79A300921FDA /* MVC解偶 */ = {
-			isa = PBXGroup;
-			children = (
-				5D4F77C421AE867900921FDA /* MVCViewController.h */,
-				5D4F77C521AE867900921FDA /* MVCViewController.m */,
-				5DD1826A21AFE6A000B814FA /* MVCManager.h */,
-				5DD1826B21AFE6A000B814FA /* MVCManager.m */,
-				5DD1826721AFD68E00B814FA /* MVCTableViewCell.h */,
-				5DD1826821AFD68E00B814FA /* MVCTableViewCell.m */,
-			);
-			path = "MVC解偶";
 			sourceTree = "<group>";
 		};
 		5D4F77BC21AE79C300921FDA /* MVP面向协议 */ = {
@@ -170,6 +177,46 @@
 				5D4F77CB21AE86E800921FDA /* JLTableViewCell.m */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		5D8F1A8321B65C530043FA41 /* MVC解耦 */ = {
+			isa = PBXGroup;
+			children = (
+				5D8F1A8421B65C530043FA41 /* MVCTableViewCell.h */,
+				5D8F1A8521B65C530043FA41 /* MVCViewController.h */,
+				5D8F1A8621B65C530043FA41 /* MVCManager.m */,
+				5D8F1A8721B65C530043FA41 /* MVCTableViewCell.m */,
+				5D8F1A8821B65C530043FA41 /* MVCManager.h */,
+				5D8F1A8921B65C530043FA41 /* MVCViewController.m */,
+			);
+			name = "MVC解耦";
+			path = "iOS-架构模式/MVC解耦";
+			sourceTree = SOURCE_ROOT;
+		};
+		5D8F1A8D21B65C670043FA41 /* 动态计算行高 */ = {
+			isa = PBXGroup;
+			children = (
+				5D8F1A9521B65D1C0043FA41 /* JLTableViewController.h */,
+				5D8F1A9621B65D1C0043FA41 /* JLTableViewController.m */,
+				5D8F1AA421B668290043FA41 /* JLContentViewCell.h */,
+				5D8F1AA521B668290043FA41 /* JLContentViewCell.m */,
+				5D8F1A9B21B65E520043FA41 /* JLTableModel.h */,
+				5D8F1A9C21B65E520043FA41 /* JLTableModel.m */,
+				5D8F1A9E21B65E680043FA41 /* JLTableViewModel.h */,
+				5D8F1A9F21B65E680043FA41 /* JLTableViewModel.m */,
+			);
+			path = "动态计算行高";
+			sourceTree = "<group>";
+		};
+		5D8F1A8E21B65C9A0043FA41 /* HYBMasonryAutoCellHeight */ = {
+			isa = PBXGroup;
+			children = (
+				5D8F1A8F21B65C9A0043FA41 /* UITableView+HYBCacheHeight.m */,
+				5D8F1A9021B65C9A0043FA41 /* UITableViewCell+HYBMasonryAutoCellHeight.h */,
+				5D8F1A9121B65C9A0043FA41 /* UITableView+HYBCacheHeight.h */,
+				5D8F1A9221B65C9A0043FA41 /* UITableViewCell+HYBMasonryAutoCellHeight.m */,
+			);
+			path = HYBMasonryAutoCellHeight;
 			sourceTree = "<group>";
 		};
 		834483855C726DFFDA327E87 /* Pods */ = {
@@ -282,20 +329,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D8F1A8B21B65C530043FA41 /* MVCTableViewCell.m in Sources */,
+				5D8F1A8A21B65C530043FA41 /* MVCManager.m in Sources */,
 				5D155C3421B0CBE300534461 /* MVVMViewModel.m in Sources */,
-				5DD1826921AFD68E00B814FA /* MVCTableViewCell.m in Sources */,
-				5D4F77C621AE867900921FDA /* MVCViewController.m in Sources */,
 				5D4F77CC21AE86E800921FDA /* JLTableViewCell.m in Sources */,
 				5D4F77AA21AE799600921FDA /* ViewController.m in Sources */,
 				5DD1826621AFD1CA00B814FA /* MVPViewController.m in Sources */,
 				5D4F77B521AE799700921FDA /* main.m in Sources */,
+				5D8F1AA021B65E680043FA41 /* JLTableViewModel.m in Sources */,
 				5D4F77C321AE7CDA00921FDA /* JLDataSource.m in Sources */,
-				5DD1826C21AFE6A000B814FA /* MVCManager.m in Sources */,
 				5D629D0B21B02F49000240FB /* MVVMViewController.m in Sources */,
+				5D8F1A9321B65C9A0043FA41 /* UITableView+HYBCacheHeight.m in Sources */,
 				5D155C3121B0CBCF00534461 /* MVVMBaseModel.m in Sources */,
 				5D4F77CF21AE8ABB00921FDA /* Present.m in Sources */,
 				5D4F77A721AE799600921FDA /* AppDelegate.m in Sources */,
+				5D8F1AA621B668290043FA41 /* JLContentViewCell.m in Sources */,
 				5D4F77C921AE86CE00921FDA /* JLModel.m in Sources */,
+				5D8F1A9721B65D1C0043FA41 /* JLTableViewController.m in Sources */,
+				5D8F1A9D21B65E520043FA41 /* JLTableModel.m in Sources */,
+				5D8F1A8C21B65C530043FA41 /* MVCViewController.m in Sources */,
+				5D8F1A9421B65C9A0043FA41 /* UITableViewCell+HYBMasonryAutoCellHeight.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

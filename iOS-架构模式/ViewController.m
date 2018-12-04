@@ -10,6 +10,7 @@
 #import "MVCViewController.h"
 #import "MVPViewController.h"
 #import "MVVMViewController.h"
+#import "JLTableViewController.h"
 @interface ViewController ()
 
 @end
@@ -33,6 +34,10 @@
         }
         case 102:{
             [self.navigationController pushViewController:[MVVMViewController new] animated:YES];
+            break;
+        }
+        case 103:{
+            [self.navigationController pushViewController:[JLTableViewController new] animated:YES];
             break;
         }
             

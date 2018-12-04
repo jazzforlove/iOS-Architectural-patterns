@@ -6,6 +6,8 @@
 //  Copyright © 2018年 Jazzfly. All rights reserved.
 //
 #import "JLDataSource.h"
+#import "Masonry/View+MASAdditions.h"
+#import "UITableViewCell+HYBMasonryAutoCellHeight.h"
 
 @interface JLDataSource ()
 
@@ -44,7 +46,6 @@
     return cell;
 }
 
-#pragma mark -- UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.selectBlock) {

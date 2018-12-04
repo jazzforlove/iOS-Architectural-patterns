@@ -12,6 +12,8 @@
 #import "Masonry.h"
 #import "YYKit.h"
 #import "JLDataSource.h"
+#import "UITableView+HYBCacheHeight.h"
+#import "UITableViewCell+HYBMasonryAutoCellHeight.h"
 
 
 #endif /* PrefixHeader_pch */
