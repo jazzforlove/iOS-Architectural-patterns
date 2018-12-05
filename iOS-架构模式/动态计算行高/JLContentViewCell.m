@@ -24,7 +24,7 @@
     return self;
 }
 - (void)setupSubViews{
-    
+    //主题
     [self.contentView addSubview:self.mainLab];
     [self.mainLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(15);
@@ -32,24 +32,25 @@
         make.right.mas_equalTo(-15);
         make.height.mas_lessThanOrEqualTo(80);
     }];
-    //
-//    self.mainLab.preferredMaxLayoutWidth = kScreenWidth - 30;
-    
+    self.mainLab.preferredMaxLayoutWidth = kScreenWidth - 30;
+    // 描述
     [self.contentView addSubview:self.descLab];
     [self.descLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(15);
         make.right.mas_equalTo(-15);
         make.top.mas_equalTo(self.mainLab.mas_bottom).offset(15);
     }];
-    //    self.descLab.preferredMaxLayoutWidth = kScreenWidth - 30;
-    
+        self.descLab.preferredMaxLayoutWidth = kScreenWidth - 30;
     [self.contentView addSubview:self.lastBtn];
+    // 按钮
     [self.lastBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(15);
         make.right.mas_equalTo(-15);
         make.top.mas_equalTo(self.descLab.mas_bottom).offset(15);
         make.height.mas_equalTo(45);
     }];
+    //距离底部的距离
+    self.hyb_bottomOffsetToCell = 20;
 }
 
 - (UILabel *)mainLab{

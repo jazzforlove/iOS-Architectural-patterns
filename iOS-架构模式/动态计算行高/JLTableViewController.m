@@ -35,7 +35,6 @@ static NSString *const identifier = @"cell";
     self.dataSource = [[JLDataSource alloc]initWithIdentifier:identifier configureBlock:^(JLContentViewCell *cell, JLTableModel *model, NSIndexPath * _Nonnull indexPath) {
         cell.mainLab.text = model.title;
         cell.descLab.text = model.desc;
-        
     } selectBlock:^(NSIndexPath * _Nonnull indexPath) {
         
     } reloadData:^(NSMutableArray * _Nonnull array) {
@@ -81,6 +80,7 @@ static NSString *const identifier = @"cell";
         _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _tableView.backgroundColor = [UIColor whiteColor];
         _tableView.allowsSelection = NO;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         [_tableView registerClass:[JLContentViewCell class] forCellReuseIdentifier:identifier];
     }
     return _tableView;
