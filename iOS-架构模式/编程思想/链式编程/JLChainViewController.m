@@ -19,6 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    /**
+     链式编程思想:方法的返回值必须是方法的调用者
+     */
     //1.普通方法
 //    Person *person = [[Person alloc]init];
 //    [person eat];
@@ -32,8 +36,8 @@
 //    person2.eat.sleep;
     
     //3.链式编程+block
-//    Person *person3 = [[Person alloc]init];
-//    person3.eat(@"香蕉").sleep(@"床");
+    Person *person3 = [[Person alloc]init];
+    person3.eat(@"香蕉").sleep(@"床");
 }
 
 

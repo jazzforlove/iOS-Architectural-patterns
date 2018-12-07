@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "addCalculator.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Person : NSObject
 
+@property (nonatomic, assign) NSInteger result;
 // 普通方法
 //- (void)eat;
 //- (void)sleep;
@@ -23,6 +24,10 @@ NS_ASSUME_NONNULL_BEGIN
 //链式+block
 - (Person *(^_Nonnull)(NSString *food))eat;
 - (Person *(^_Nonnull)(NSString *where))sleep;
+
+// 函数式+block
+- (Person *)calculate:(NSInteger (^)(NSInteger result))block;
+- (Person *)makeCalculate:(void (^)(addCalculator *calculator))block;
 
 @end
 

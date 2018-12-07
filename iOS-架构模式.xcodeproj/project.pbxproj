@@ -13,6 +13,8 @@
 		5D155C3921B0D7B000534461 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 5D155C3821B0D7B000534461 /* File */; };
 		5D328FB721BA581A00A0B191 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D328FB621BA581A00A0B191 /* Person.m */; };
 		5D328FBA21BA58DC00A0B191 /* JLChainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D328FB921BA58DC00A0B191 /* JLChainViewController.m */; };
+		5D328FBE21BA64C500A0B191 /* JLFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D328FBD21BA64C500A0B191 /* JLFunctionViewController.m */; };
+		5D328FC221BA748300A0B191 /* addCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D328FC121BA748300A0B191 /* addCalculator.m */; };
 		5D4F77A721AE799600921FDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F77A621AE799600921FDA /* AppDelegate.m */; };
 		5D4F77AA21AE799600921FDA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F77A921AE799600921FDA /* ViewController.m */; };
 		5D4F77AD21AE799600921FDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4F77AB21AE799600921FDA /* Main.storyboard */; };
@@ -48,6 +50,10 @@
 		5D328FB621BA581A00A0B191 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		5D328FB821BA58DC00A0B191 /* JLChainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLChainViewController.h; sourceTree = "<group>"; };
 		5D328FB921BA58DC00A0B191 /* JLChainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLChainViewController.m; sourceTree = "<group>"; };
+		5D328FBC21BA64C500A0B191 /* JLFunctionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLFunctionViewController.h; sourceTree = "<group>"; };
+		5D328FBD21BA64C500A0B191 /* JLFunctionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLFunctionViewController.m; sourceTree = "<group>"; };
+		5D328FC021BA748300A0B191 /* addCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addCalculator.h; sourceTree = "<group>"; };
+		5D328FC121BA748300A0B191 /* addCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = addCalculator.m; sourceTree = "<group>"; };
 		5D4F77A221AE799500921FDA /* iOS-架构模式.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-架构模式.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4F77A521AE799600921FDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5D4F77A621AE799600921FDA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -129,6 +135,11 @@
 		5D328FB321BA57DC00A0B191 /* 响应式编程 */ = {
 			isa = PBXGroup;
 			children = (
+				5D328FBF21BA658B00A0B191 /* 函数式 */,
+				5D328FBC21BA64C500A0B191 /* JLFunctionViewController.h */,
+				5D328FBD21BA64C500A0B191 /* JLFunctionViewController.m */,
+				5D328FC021BA748300A0B191 /* addCalculator.h */,
+				5D328FC121BA748300A0B191 /* addCalculator.m */,
 			);
 			path = "响应式编程";
 			sourceTree = "<group>";
@@ -138,6 +149,13 @@
 			children = (
 			);
 			path = ReactiveCocoa;
+			sourceTree = "<group>";
+		};
+		5D328FBF21BA658B00A0B191 /* 函数式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "函数式";
 			sourceTree = "<group>";
 		};
 		5D4F779921AE799500921FDA = {
@@ -378,6 +396,7 @@
 				5D4F77AA21AE799600921FDA /* ViewController.m in Sources */,
 				5DD1826621AFD1CA00B814FA /* MVPViewController.m in Sources */,
 				5D328FBA21BA58DC00A0B191 /* JLChainViewController.m in Sources */,
+				5D328FBE21BA64C500A0B191 /* JLFunctionViewController.m in Sources */,
 				5D4F77B521AE799700921FDA /* main.m in Sources */,
 				5D8F1AA021B65E680043FA41 /* JLTableViewModel.m in Sources */,
 				5D4F77C321AE7CDA00921FDA /* JLDataSource.m in Sources */,
@@ -391,6 +410,7 @@
 				5D4F77C921AE86CE00921FDA /* JLModel.m in Sources */,
 				5D8F1A9721B65D1C0043FA41 /* JLTableViewController.m in Sources */,
 				5D8F1A9D21B65E520043FA41 /* JLTableModel.m in Sources */,
+				5D328FC221BA748300A0B191 /* addCalculator.m in Sources */,
 				5D8F1A8C21B65C530043FA41 /* MVCViewController.m in Sources */,
 				5D8F1A9421B65C9A0043FA41 /* UITableViewCell+HYBMasonryAutoCellHeight.m in Sources */,
 			);

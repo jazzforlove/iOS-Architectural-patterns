@@ -40,4 +40,17 @@
     };
 }
 
+- (Person *)calculate:(NSInteger (^)(NSInteger result))block{
+    _result = block(_result);
+    return self;
+}
+
+- (Person *)makeCalculate:(void (^)(addCalculator *calculator))block{
+    addCalculator *add = [[addCalculator alloc]init];
+    if (block) {
+        block(add);
+    }
+    self.result = add.sumresult;
+    return self;
+}
 @end

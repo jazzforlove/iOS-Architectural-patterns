@@ -12,6 +12,7 @@
 #import "MVVMViewController.h"
 #import "JLTableViewController.h"
 #import "JLChainViewController.h"
+#import "JLFunctionViewController.h"
 @interface ViewController ()
 
 @end
@@ -45,7 +46,10 @@
             [self.navigationController pushViewController:[JLChainViewController new] animated:YES];
             break;
         }
-            
+        case 105:{
+            [self.navigationController pushViewController:[JLFunctionViewController new] animated:YES];
+            break;
+        }
         default:
             break;
     }
