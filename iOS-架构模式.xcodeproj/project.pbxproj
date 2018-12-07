@@ -11,6 +11,8 @@
 		5D155C3121B0CBCF00534461 /* MVVMBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D155C3021B0CBCF00534461 /* MVVMBaseModel.m */; };
 		5D155C3421B0CBE300534461 /* MVVMViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D155C3321B0CBE300534461 /* MVVMViewModel.m */; };
 		5D155C3921B0D7B000534461 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 5D155C3821B0D7B000534461 /* File */; };
+		5D328FB721BA581A00A0B191 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D328FB621BA581A00A0B191 /* Person.m */; };
+		5D328FBA21BA58DC00A0B191 /* JLChainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D328FB921BA58DC00A0B191 /* JLChainViewController.m */; };
 		5D4F77A721AE799600921FDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F77A621AE799600921FDA /* AppDelegate.m */; };
 		5D4F77AA21AE799600921FDA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F77A921AE799600921FDA /* ViewController.m */; };
 		5D4F77AD21AE799600921FDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4F77AB21AE799600921FDA /* Main.storyboard */; };
@@ -42,6 +44,10 @@
 		5D155C3221B0CBE300534461 /* MVVMViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMViewModel.h; sourceTree = "<group>"; };
 		5D155C3321B0CBE300534461 /* MVVMViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMViewModel.m; sourceTree = "<group>"; };
 		5D155C3821B0D7B000534461 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		5D328FB521BA581A00A0B191 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		5D328FB621BA581A00A0B191 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		5D328FB821BA58DC00A0B191 /* JLChainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLChainViewController.h; sourceTree = "<group>"; };
+		5D328FB921BA58DC00A0B191 /* JLChainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLChainViewController.m; sourceTree = "<group>"; };
 		5D4F77A221AE799500921FDA /* iOS-架构模式.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-架构模式.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4F77A521AE799600921FDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5D4F77A621AE799600921FDA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -99,6 +105,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D328FB121BA578100A0B191 /* 编程思想 */ = {
+			isa = PBXGroup;
+			children = (
+				5D328FB421BA57E800A0B191 /* ReactiveCocoa */,
+				5D328FB321BA57DC00A0B191 /* 响应式编程 */,
+				5D328FB221BA57CE00A0B191 /* 链式编程 */,
+			);
+			path = "编程思想";
+			sourceTree = "<group>";
+		};
+		5D328FB221BA57CE00A0B191 /* 链式编程 */ = {
+			isa = PBXGroup;
+			children = (
+				5D328FB521BA581A00A0B191 /* Person.h */,
+				5D328FB621BA581A00A0B191 /* Person.m */,
+				5D328FB821BA58DC00A0B191 /* JLChainViewController.h */,
+				5D328FB921BA58DC00A0B191 /* JLChainViewController.m */,
+			);
+			path = "链式编程";
+			sourceTree = "<group>";
+		};
+		5D328FB321BA57DC00A0B191 /* 响应式编程 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "响应式编程";
+			sourceTree = "<group>";
+		};
+		5D328FB421BA57E800A0B191 /* ReactiveCocoa */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReactiveCocoa;
+			sourceTree = "<group>";
+		};
 		5D4F779921AE799500921FDA = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +161,7 @@
 		5D4F77A421AE799500921FDA /* iOS-架构模式 */ = {
 			isa = PBXGroup;
 			children = (
+				5D328FB121BA578100A0B191 /* 编程思想 */,
 				5D8F1A8E21B65C9A0043FA41 /* HYBMasonryAutoCellHeight */,
 				5D8F1A8D21B65C670043FA41 /* 动态计算行高 */,
 				5D4F77BF21AE79EE00921FDA /* Common */,
@@ -335,9 +377,11 @@
 				5D4F77CC21AE86E800921FDA /* JLTableViewCell.m in Sources */,
 				5D4F77AA21AE799600921FDA /* ViewController.m in Sources */,
 				5DD1826621AFD1CA00B814FA /* MVPViewController.m in Sources */,
+				5D328FBA21BA58DC00A0B191 /* JLChainViewController.m in Sources */,
 				5D4F77B521AE799700921FDA /* main.m in Sources */,
 				5D8F1AA021B65E680043FA41 /* JLTableViewModel.m in Sources */,
 				5D4F77C321AE7CDA00921FDA /* JLDataSource.m in Sources */,
+				5D328FB721BA581A00A0B191 /* Person.m in Sources */,
 				5D629D0B21B02F49000240FB /* MVVMViewController.m in Sources */,
 				5D8F1A9321B65C9A0043FA41 /* UITableView+HYBCacheHeight.m in Sources */,
 				5D155C3121B0CBCF00534461 /* MVVMBaseModel.m in Sources */,
