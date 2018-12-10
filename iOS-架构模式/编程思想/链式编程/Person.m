@@ -27,14 +27,14 @@
 //}
 
 - (Person *(^_Nonnull)(NSString *food))eat{
-    return ^(NSString *food){
+    return ^(NSString  * _Nonnull food){
         NSLog(@"吃:%@",food);
         return self;
     };
 }
 
 - (Person *(^_Nonnull)(NSString *where))sleep{
-    return ^(NSString *where){
+    return ^(NSString  * _Nonnull where){
         NSLog(@"睡:%@",where);
         return self;
     };
